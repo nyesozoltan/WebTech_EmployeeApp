@@ -1,0 +1,25 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title> 
+</head>
+<body>
+  <div class="bokeh-background">
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+    <div class="bokeh"></div>
+  </div>
+
+  <div class="login-card">
+    <h2>Bejelentkezés</h2>
+    <form>
+      <input type="text" [(ngModel)]="loginObj.userName" name="user" placeholder="Felhasználónév" required>
+      <input type="password" [(ngModel)]="loginObj.password" name="password" placeholder="Jelszó" required>
+      <button type="button" (click)="onLogin()">Belépés</button>
+    </form>
+  </div>
+</body>
+</html>
