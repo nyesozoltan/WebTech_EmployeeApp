@@ -1,0 +1,82 @@
+[
+  {
+    "employeeId": "0001",
+    "employeeName": "Kiss Péter",
+    "emailId": "kiss.peter@example.com",
+    "department": "Informatika",
+    "gender": "Férfi",
+    "birthDate": "1985-03-15"
+  },
+  {
+    "employeeId": "0002",
+    "employeeName": "Nagy Éva",
+    "emailId": "nagy.eva@example.com",
+    "department": "HR",
+    "gender": "Nő",
+    "birthDate": "1990-06-22"
+  },
+  {
+    "employeeId": "0003",
+    "employeeName": "Szabó Gábor",
+    "emailId": "szabo.gabor@example.com",
+    "department": "Logisztika",
+    "gender": "Férfi",
+    "birthDate": "1982-11-10"
+  },
+  {
+    "employeeId": "0004",
+    "employeeName": "Tóth Anna",
+    "emailId": "toth.anna@example.com",
+    "department": "Marketing",
+    "gender": "Nő",
+    "birthDate": "1995-01-05"
+  },
+  {
+    "employeeId": "0005",
+    "employeeName": "Farkas Zoltán",
+    "emailId": "farkas.zoltan@example.com",
+    "department": "Informatika",
+    "gender": "Férfi",
+    "birthDate": "1988-09-19"
+  },
+  {
+    "employeeId": "0006",
+    "employeeName": "Kovács Katalin",
+    "emailId": "kovacs.katalin@example.com",
+    "department": "Ügyfélszolgálat",
+    "gender": "Nő",
+    "birthDate": "1992-07-30"
+  },
+  {
+    "employeeId": "0007",
+    "employeeName": "Balogh Dániel",
+    "emailId": "balogh.daniel@example.com",
+    "department": "Beszerzés",
+    "gender": "Férfi",
+    "birthDate": "1983-12-12"
+  },
+  {
+    "employeeId": "0008",
+    "employeeName": "Varga Noémi",
+    "emailId": "varga.noemi@example.com",
+    "department": "HR",
+    "gender": "Nő",
+    "birthDate": "1991-04-08"
+  },
+  {
+    "employeeId": "0009",
+    "employeeName": "Horváth Ákos",
+    "emailId": "horvath.akos@example.com",
+    "department": "Pénzügy",
+    "gender": "Férfi",
+    "birthDate": "1987-10-03"
+  },
+  {
+    "employeeId": "0010",
+    "employeeName": "Molnár Réka",
+    "emailId": "molnar.reka@example.com",
+    "department": "Informatika",
+    "gender": "Nő",
+    "birthDate": "1993-02-27"
+  }
+]
