@@ -32,6 +32,7 @@
                                 <td>{{ employee.department }}</td>
                                 <td>{{ employee.gender }}</td>
                                 <td>{{ employee.birthDate | date:'yyyy-MM-dd' }}</td>
+                                 <button class="btn btn text-white" style="background-color:#a51414;" (click)="onDeleteEmployee(employee.employeeId)">Törlés</button>
                               </tr>
                         </tbody>
                     </table>
@@ -67,29 +68,37 @@
                     <div class="row">
                         <div class="col-md-6">
                             <label for="department" class="form-label">Osztály</label>
-                            <input type="text" class="form-control" name="department" [(ngModel)]="employeeObj.department" id="department" placeholder="Adja meg a osztályt">
-                        </div>    
-                        <div class="col-md-6">
-                            <label for="gender" class="form-label">Nem</label>
-                            <select id="gender" class="form-control" name="gender" [(ngModel)]="employeeObj.gender">
-                                <option selected>Válasszon nemet</option>
-                                <option value="Male">Férfi</option>
-                                <option value="Female">Nő</option>
-                                <option value="Other">Egyéb</option>                            
-                            </select>                       
-                        </div>
-                    </div>    
-                    <div class="row">                      
+                            <select id="department" class="form-control" name="department" [(ngModel)]="employeeObj.department">
+                              <option value="">Válasszon osztályt</option>
+                              <option *ngFor="let dep of departments" [value]="dep">{{ dep }}</option>
+                            </select>
+                          </div>   
                         <div class="col-md-6">
                             <label for="">Dátum</label>
                             <input type="date" name="birthDate" class="form-control" [(ngModel)]="employeeObj.birthDate">
                         </div>
-                    </div>                
+                    <div class="row"> 
+                        <div class="col-md-6">
+                            <label class="form-label d-block mb-1">Nem</label>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" [(ngModel)]="employeeObj.gender" value="Férfi" id="genderMale">
+                              <label class="form-check-label" for="genderMale">Férfi</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" [(ngModel)]="employeeObj.gender" value="Nő" id="genderFemale">
+                              <label class="form-check-label" for="genderFemale">Nő</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                              <input class="form-check-input" type="radio" name="gender" [(ngModel)]="employeeObj.gender" value="Egyéb" id="genderOther">
+                              <label class="form-check-label" for="genderOther">Egyéb</label>
+                            </div>
+                          </div>
+                    </div>  
+                </div>                                
                 </form>    
                 <div class="row pt-1">
                   <div class="col-6 text-center">
-                    <button type="button" class="btn text-white" style="background-color:#264441;" (click)="addEmployee()">Elküld</button>
-                    
+                    <button type="button" class="btn text-white" style="background-color:#264441;" (click)="onSaveEmployee()">Elküld</button>
                   </div>                                       
             </div>
         </div>
