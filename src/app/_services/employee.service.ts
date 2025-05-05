@@ -39,12 +39,13 @@ export class EmployeeService {
     
 
     updateEmployee(employee: Employee) {
-        const index = this.employees.findIndex((e) => e.employeeId === employee.employeeId);
+        const index = this.employees.findIndex(e => e.employeeId === employee.employeeId);
         if (index !== -1) {
-            this.employees[index] = employee;
-            this.saveEmployeesToLocalStorage();
+          this.employees[index] = employee;
+          this.saveEmployeesToLocalStorage();
+          
         }
-    };
+      }
 
     deleteEmployee(id: string) {
         const index = this.employees.findIndex((employee) => employee.employeeId === id);

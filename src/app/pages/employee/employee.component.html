@@ -32,7 +32,8 @@
                                 <td>{{ employee.department }}</td>
                                 <td>{{ employee.gender }}</td>
                                 <td>{{ employee.birthDate | date:'yyyy-MM-dd' }}</td>
-                                 <button class="btn btn text-white" style="background-color:#a51414;" (click)="onDeleteEmployee(employee.employeeId)">Törlés</button>
+                                 <button class="btn btn text-white" style="background-color:#264441;" (click)="onEditEmployee(employee.employeeId)">Szerkeszt</button>
+                                 <button class="btn btn text-white" style="background-color:#a51414;" (click)="onDeleteEmployee(employee.employeeId)">Töröl</button>
                               </tr>
                         </tbody>
                     </table>
@@ -73,9 +74,11 @@
                               <option *ngFor="let dep of departments" [value]="dep">{{ dep }}</option>
                             </select>
                           </div>   
-                        <div class="col-md-6">
-                            <label for="">Dátum</label>
-                            <input type="date" name="birthDate" class="form-control" [(ngModel)]="employeeObj.birthDate">
+                        <div class="col-md-6 d-flex align-items-end">
+                            <div class="w-100">
+                                <label class="form-label mb-2">Dátum</label>
+                                <input type="date" name="birthDate" class="form-control" [(ngModel)]="employeeObj.birthDate">
+                            </div>
                         </div>
                     <div class="row"> 
                         <div class="col-md-6">
@@ -97,10 +100,23 @@
                 </div>                                
                 </form>    
                 <div class="row pt-1">
-                  <div class="col-6 text-center">
-                    <button type="button" class="btn text-white" style="background-color:#264441;" (click)="onSaveEmployee()">Elküld</button>
-                  </div>                                       
-            </div>
+                    <div class="col-6 text-center">
+                      <button
+                        *ngIf="!employeeObj.employeeId"
+                        type="button"
+                        class="btn text-white"
+                        style="background-color:#264441;"
+                        (click)="onSaveEmployee()">Elküld</button>
+                  
+                      <button
+                        *ngIf="employeeObj.employeeId"
+                        type="button"
+                        class="btn text-white"
+                        style="background-color:#264441;"
+                        (click)="onUpdateEmployee()">Módosít</button>
+                    </div>
+                  </div>
+                </div>  
         </div>
     </div>
 </div>
