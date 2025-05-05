@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { inject, Injectable } from "@angular/core";
-import { Employee } from "../model/Employee";
+import { Employee } from "../model/employee";
 import { Observable, tap } from "rxjs";
 
 const STORAGE_KEY = 'employees';
@@ -36,6 +36,7 @@ export class EmployeeService {
         this.employees.push(employee);
         this.saveEmployeesToLocalStorage();
     };
+    
 
     updateEmployee(employee: Employee) {
         const index = this.employees.findIndex((e) => e.employeeId === employee.employeeId);
